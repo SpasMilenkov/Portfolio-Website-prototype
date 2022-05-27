@@ -1,0 +1,172 @@
+/*-------------*/
+/*    RESET    */
+/*-------------*/
+/*  box size    */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture{
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    font-weight: 400;
+}
+
+/*set up the body*/
+
+body{
+    font-family: --ff-sans-normal;
+    font-size: --fs-400;
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+img,
+picture{
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select{
+    font:inherit;
+}
+
+/*remove animations for people who have turned off animations*/
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/*-------------*/
+/*   Utility Classes   */
+/*-------------*/
+.container{
+    padding-inline: 2em;
+    max-width: 80rem;
+    margin-inline: auto;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space:nowrap;
+    border: 0;
+}
+.upperCase{
+    text-transform: uppercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+/*----------------*/
+/*--- ELEMENTS ---*/
+/*----------------*/
+html{
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-padding: 10vh;
+}
+.navigation{
+    height: 10vh;
+    width: 100vw;
+    background-color: blueviolet;
+    top:0;
+    position: sticky;
+}
+.navigation ul{
+    display: inline-flex;
+}
+.navigation li{
+    list-style: none;
+    margin-left: 1rem;
+
+}
+.navigation li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+.hello-section{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    background-color: hsl(216, 7%, 14%);
+    height: 90vh;
+    width: 100vw;
+    max-width: 100%;
+}
+.my-skills{
+    height: 90vh;
+    width: 100vw;
+    max-width: 100%;
+    background-color: darkcyan;
+
+}
+.my-projects{
+    height: 90vh;
+    width: 100vw;
+    background-color: salmon;
+} 
+.contact-me{
+    height: 90vh;
+    width: 100vw;
+    background-color: burlywood; 
+}
+.card{
+    width: 25%;
+    height: 50%;
+}
+#pfp{
+    left: 0.1rem;
+    top:10px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+.card a img{
+    width: 50%;
+    border: 1px;
+    border-radius: 50%;
+}
+.card p{
+    color: white;
+}
