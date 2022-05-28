@@ -74,11 +74,6 @@ select{
 /*-------------*/
 /*   Utility Classes   */
 /*-------------*/
-.container{
-    padding-inline: 2em;
-    max-width: 80rem;
-    margin-inline: auto;
-}
 .sr-only{
     position: absolute;
     width: 1px;
@@ -143,7 +138,6 @@ html{
 }
 #section-about{
     background: url(Resources/background1.jpg);
-    /* background-blend-mode: darken; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -151,12 +145,6 @@ html{
     flex-direction: row-reverse;
     height: 90vh;
     width: 100vw;
-}
-.my-skills{
-    height: 90vh;
-    width: 100vw;
-    background-color: darkcyan;
-
 }
 #section-projects{
     height: 90vh;
@@ -214,4 +202,119 @@ html{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5%;
     padding: 5px;
+}
+#section-skills{
+    height: 90vh;
+    width: 100vw;
+    background-color: rgb(26, 28, 44);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#section-skills h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: white;
+    border-bottom: solid 3px white;
+    margin-bottom: 3rem;
+}
+#section-skills .wrapper{
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10%;
+    padding-top: 5rem;
+}
+.progress-card{
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    align-items: center;
+}
+#section-skills h2{
+    color: white;
+    font-family: 'lato', sans-serif;
+}
+#section-skills h3{
+    color: white;
+    font-family: 'lato', sans-serif;
+}
+.progress-bar{
+    width: 400px;
+    max-width: 400px;
+    height: 2px;
+    background: rgb(148, 211, 218);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.progress-bar div{
+    width: 0%;
+    background-color: rgb(193, 242, 186);
+    height: 2px;
+}
+.progress-bar div span{
+    float: right; 
+    color: white;
+    color: rgb(193, 242, 186);
+}
+.progress-bar .html{
+    background-color: rgb(218, 95, 203);
+    animation: html 3s linear forwards;
+}
+.progress-bar .css{
+    background-color: rgb(238, 210, 168);
+    animation: css 3s linear forwards;
+}
+.progress-bar .c-sharp{
+    background-color: rgb(116, 152, 218);
+    animation: c-sharp 3s linear forwards;
+}
+.progress-bar .mysql{
+    background-color: rgb(0, 254, 252);
+    animation: mysql 3s linear forwards;
+}
+.progress-bar .asp-net{
+    background-color: rgb(255,173,0);
+    animation: asp-net 3s linear forwards;
+}
+.progress-bar .blazor{
+    background-color: rgb(219,62,177);
+    animation: blazor 3s linear forwards;
+}
+@keyframes html{
+    100%{
+        width: 75%;
+    }
+}
+@keyframes css{
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes c-sharp{
+    100%{
+        width: 75%;
+    }
+}
+@keyframes mysql{
+    100%{
+        width: 25%;
+    }
+}
+@keyframes asp-net{
+    100%{
+        width: 25%;
+    }
+}
+@keyframes blazor{
+    100%{
+        width: 25%;
+    }
 }
