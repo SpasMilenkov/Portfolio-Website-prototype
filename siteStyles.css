@@ -142,16 +142,13 @@ html{
     color: white;
 }
 #section-about{
-    background: rgba(0, 0, 0, 0.3) url(/Resources/background1.jpg);
-    background-blend-mode: darken;
+    background: url(Resources/background1.jpg);
+    /* background-blend-mode: darken; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-.hello-section{
     display: flex;
-    flex-direction: row;
-    background-color: hsl(216, 7%, 14%);
+    flex-direction: row-reverse;
     height: 90vh;
     width: 100vw;
 }
@@ -161,29 +158,25 @@ html{
     background-color: darkcyan;
 
 }
-.my-projects{
+#section-projects{
     height: 90vh;
     width: 100vw;
     background-color: salmon;
-} 
+}
 .contact-me{
     height: 90vh;
     width: 100vw;
     background-color: burlywood; 
 }
 .card{
-    width: 50%;
-    height: 100%;
+    width: 52.5%;
+    height: 95%;
     margin: 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-}
-#pfp p{
-    left: 0.1rem;
-    top:10px;
-    display: block;
-    font-family: 'Montserrat', sans-serif;
 }
 .card a{
     width: 45%;
@@ -195,4 +188,30 @@ html{
 }
 .card p{
     color: white;
+}
+#bio{
+    color: white;
+    font: 'lato', sans-serif;
+}
+#bio h1{
+    border-bottom: solid 3px white;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+#bio p{
+    max-width: 30rem;
+    font-size: 1.5rem;
+    font-family: 'lato', sans-serif;
+}
+.containter{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    padding: 5px;
 }
