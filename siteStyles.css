@@ -99,7 +99,7 @@ html{
     max-width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-padding: 5vh;
+    /* scroll-padding: 5vh; */
 }
 .navigation{
     height: 5vh;
@@ -107,6 +107,7 @@ html{
     background-color: crimson;
     top:0;
     position: sticky;
+    z-index: 100;
 }
 .navigation ul{
     display: inline-flex;
@@ -246,7 +247,7 @@ html{
     height: 2px;
     background: rgb(148, 211, 218);
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .progress-bar div{
     width: 0%;
@@ -273,27 +274,27 @@ html{
 
 .progress-bar .html{
     background-color: rgb(218, 95, 203);
-    animation: html 3s linear forwards;
+    animation: html 1s linear forwards;
 }
 .progress-bar .css{
     background-color: rgb(238, 210, 168);
-    animation: css 3s linear forwards;
+    animation: css 1s linear forwards;
 }
 .progress-bar .c-sharp{
     background-color: rgb(116, 152, 218);
-    animation: c-sharp 3s linear forwards;
+    animation: c-sharp 1s linear forwards;
 }
 .progress-bar .mysql{
     background-color: rgb(0, 254, 252);
-    animation: mysql 3s linear forwards;
+    animation: mysql 1s linear forwards;
 }
 .progress-bar .asp-net{
     background-color: rgb(255,173,0);
-    animation: asp-net 3s linear forwards;
+    animation: asp-net 1s linear forwards;
 }
 .progress-bar .blazor{
     background-color: rgb(219,62,177);
-    animation: blazor 3s linear forwards;
+    animation: blazor 1s linear forwards;
 }
 @keyframes html{
     100%{
@@ -327,7 +328,7 @@ html{
     }
 }
 #section-projects{
-    height: 95vh;
+    height: 150vh;
     width: 100vw;
     background-color: rgb(13, 14, 22);
     display: flex;
@@ -343,11 +344,119 @@ html{
     margin-bottom: 3rem;
 }
 #section-projects .wrapper{
-    width: 90%;
-    height: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    width: 95%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-areas: 
+    "first second third"
+    "fourth fifth sixth"
+    "seventh eight ninth";
     border-radius: 10%;
-    padding-top: 5rem;
+}
+#section-projects a{
+    text-decoration: none;
+    transition: transform .2s;
+    border-radius: 5%;
+}
+#section-projects a img{
+    width: 95%;
+}
+.project{
+    background-color: white;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section-projects div :hover{
+    -ms-transform: scale(1.01); 
+    -webkit-transform: scale(1.01); 
+    transform: scale(1.01); 
+}
+#section-projects div * :hover{
+    -ms-transform: scale(1.0); 
+    -webkit-transform: scale(1.0); 
+    transform: scale(1.0); 
+}
+.first{
+    background-color: rgb(117, 10, 32);
+}
+.second{
+    background-color: rgb(63, 42, 111);
+}
+.third{
+    background-color: rgb(63, 42, 111);
+}
+.fourth{
+    background-color: rgb(63, 42, 111);
+}
+.fifth{
+    background-color: rgb(63, 42, 111);
+}
+.sixth{
+    background-color: rgb(63, 42, 111);
+}
+.seventh{
+    background-color: rgb(63, 42, 111);
+}
+.eight{
+    background-color: rgb(63, 42, 111);
+}
+.ninth{
+    background-color: rgb(63, 42, 111);
+}
+.project h2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width: 1200px){
+    #section-projects{
+        height: 225vh;
+    }
+    #section-projects .wrapper{
+        width: 95%;
+        height: 85%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-template-areas: 
+        "first second"
+        "third fourth"
+        "fifth sixth "
+        "seventh eight"
+        "ninth ninth";
+        border-radius: 10%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #section-projects{
+        height: 450vh;
+    }
+    #section-projects .wrapper{
+        width: 95%;
+        height: 85%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-template-areas: 
+        "first"
+        "second"
+        " third"
+        "fourth"
+        "fifth"
+        "sixth"
+        "seventh"
+        "eight"
+        "ninth";
+        border-radius: 10%;
+    }
 }
