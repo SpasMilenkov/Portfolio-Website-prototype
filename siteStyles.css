@@ -99,10 +99,10 @@ html{
     max-width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-padding: 10vh;
+    scroll-padding: 5vh;
 }
 .navigation{
-    height: 10vh;
+    height: 5vh;
     width: 100vw;
     background-color: crimson;
     top:0;
@@ -114,19 +114,19 @@ html{
 .navigation li{
     list-style: none;
     margin-left: 1rem;
-
 }
 .navigation li a{
     text-decoration: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Lato', sans-serif;
     letter-spacing: 2px;
+    margin-bottom: 0.5rem;
 }
 #greetings-section{
     display: flex;
     background-image:linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-    height: 90vh;
+    height: 95vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -143,13 +143,8 @@ html{
     background-position: center;
     display: flex;
     flex-direction: row-reverse;
-    height: 90vh;
+    height: 95vh;
     width: 100vw;
-}
-#section-projects{
-    height: 90vh;
-    width: 100vw;
-    background-color: salmon;
 }
 .contact-me{
     height: 90vh;
@@ -204,7 +199,7 @@ html{
     padding: 5px;
 }
 #section-skills{
-    height: 90vh;
+    height: 95vh;
     width: 100vw;
     background-color: rgb(26, 28, 44);
     display: flex;
@@ -259,10 +254,23 @@ html{
     height: 2px;
 }
 .progress-bar div span{
+    font-family: "lato", sans-serif;
     float: right; 
-    color: white;
     color: rgb(193, 242, 186);
 }
+.progress-bar .css span{
+    color: rgb(0, 203, 201);
+}
+.progress-bar .mysql span{
+    color: rgb(217, 16, 58);
+}
+.progress-bar .asp-net span{
+    color: rgb(217, 16, 58);
+}
+.progress-bar .blazor span{
+    color: rgb(217, 16, 58);
+}
+
 .progress-bar .html{
     background-color: rgb(218, 95, 203);
     animation: html 3s linear forwards;
@@ -317,4 +325,29 @@ html{
     100%{
         width: 25%;
     }
+}
+#section-projects{
+    height: 95vh;
+    width: 100vw;
+    background-color: rgb(13, 14, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#section-projects h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: white;
+    border-bottom: solid 3px white;
+    margin-bottom: 3rem;
+}
+#section-projects .wrapper{
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10%;
+    padding-top: 5rem;
 }
