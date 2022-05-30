@@ -99,7 +99,7 @@ html{
     max-width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    /* scroll-padding: 5vh; */
+    scroll-padding: 5vh;
 }
 .navigation{
     height: 5vh;
@@ -206,7 +206,6 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 #section-skills h1{
     font-family: 'Montserrat', sans-serif;
@@ -364,6 +363,8 @@ html{
 }
 #section-projects a img{
     width: 95%;
+    border: solid 5px white;
+    border-radius: 5%;
 }
 .project{
     background-color: white;
@@ -415,8 +416,49 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 @media only screen and (max-width: 1200px){
+    #section-skills{
+        height: 135vh;
+        width: 100vw;
+        background-color: rgb(26, 28, 44);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #section-skills .wrapper{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10%;
+    }
+    .progress-card{
+        width: 60%;
+        min-width: 350px;
+        min-height: 400px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    .progress-card h2{
+        margin-bottom: 3rem;
+    }
+    .progress-bar{
+        width: 300px;
+        max-width: 400px;
+        height: 2px;
+        background: rgb(148, 211, 218);
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
     #section-projects{
         height: 225vh;
+    }
+    .project h2{
+        margin-bottom: 2rem;
     }
     #section-projects .wrapper{
         width: 95%;
@@ -435,9 +477,12 @@ html{
         border-radius: 10%;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     #section-projects{
         height: 450vh;
+    }
+    .project h2{
+        margin-bottom: 1rem;
     }
     #section-projects .wrapper{
         width: 95%;
