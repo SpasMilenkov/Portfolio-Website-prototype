@@ -162,9 +162,6 @@ html{
     justify-content: center;
     flex-direction: column;
 }
-.card a{
-    width: 45%;
-}
 .card a img{
     width: 100%;
     border: 1px;
@@ -475,6 +472,24 @@ html{
         "seventh eight"
         "ninth ninth";
         border-radius: 10%;
+    }
+}
+@media only screen and (max-width: 950px){
+    #section-about{
+        height: 100vh;
+        flex-direction: column;
+    }
+    #section-about{
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+        width: 100vw;
+    }
+    .card{
+        width: 95%;
+    }
+    #bio p{
+        font-size: 1.2rem;
     }
 }
 @media only screen and (max-width: 800px) {
