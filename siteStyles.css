@@ -138,7 +138,7 @@ html{
     color: white;
 }
 #section-about{
-    background: url(Resources/background1.jpg);
+    background: url(Resources/background1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
